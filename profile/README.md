@@ -23,27 +23,27 @@ The platform follows a layered architecture with a clear separation between the 
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                      Edge / Device Layer                     │
+│                      Edge / Device Layer                    │
 │         ESP32 Gateways  ←→  Sensors / Actuators             │
-│         (MQTT Publish: telemetry, heartbeat, ACK)            │
+│         (MQTT Publish: telemetry, heartbeat, ACK)           │
 └───────────────────────────┬─────────────────────────────────┘
                             │ MQTT (Aedes :1883)
 ┌───────────────────────────▼─────────────────────────────────┐
-│                   Realtime Server (Node.js)                  │
+│                   Realtime Server (Node.js)                 │
 │  Express API  +  SSE Streams  +  WebSocket  +  Aedes MQTT   │
-│  • Telemetry ingestion    • Control queue orchestration      │
-│  • ACK tracking           • Device status & whitelist sync   │
+│  • Telemetry ingestion    • Control queue orchestration     │
+│  • ACK tracking           • Device status & whitelist sync  │
 └───────────────────────────┬─────────────────────────────────┘
                             │ REST API / Auth (Passport)
 ┌───────────────────────────▼─────────────────────────────────┐
-│                     Backend (Laravel)                        │
+│                     Backend (Laravel)                       │
 │  • Core API: Auth, Users, Company, Notifications, Logs      │
 │  • ControlModule: Gateway, Node, Control URL, Workflow      │
 │  • MapModule: Managed Area, Node Sync, Route                │
 └───────────────────────────┬─────────────────────────────────┘
                             │ REST API
 ┌───────────────────────────▼─────────────────────────────────┐
-│                    Frontend (Nuxt / Vue)                     │
+│                    Frontend (Nuxt / Vue)                    │
 │  Dashboard  ·  Workflow / Scenario Execution  ·  Map Ops    │
 └─────────────────────────────────────────────────────────────┘
 ```
@@ -53,7 +53,7 @@ The platform follows a layered architecture with a clear separation between the 
 ## Core Modules
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/IoTCoreTeam/.github/main/img/dashboard.png" alt="IoT Core Team dashboard" style="width: 100%; height: auto;">
+  <img src="https://github.com/IoTCoreTeam/.github/blob/main/dashboard.png" alt="IoT Core Team dashboard" style="width: 100%; height: auto;">
 </p>
 
 ### Core API
@@ -79,7 +79,7 @@ Versioned device management API at `/api/v1/*`, protected by `auth:api` and `adm
 ### MapModule
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/IoTCoreTeam/.github/main/img/workflow.png" alt="IoT Core Team workflow" style="width: 100%; height: auto;">
+  <img src="https://github.com/IoTCoreTeam/.github/blob/main/workflow.png" alt="IoT Core Team workflow" style="width: 100%; height: auto;">
 </p>
 
 Spatial management and routing for campuses and factories:
@@ -91,7 +91,7 @@ Spatial management and routing for campuses and factories:
 ### Realtime Server
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/IoTCoreTeam/.github/main/img/controllog.png" alt="IoT Core Team control-log" style="width: 100%; height: auto;">
+  <img src="https://github.com/IoTCoreTeam/.github/blob/main/control-log.png" alt="IoT Core Team control-log" style="width: 100%; height: auto;">
 </p>
 
 The real-time data processing and stream delivery layer:
